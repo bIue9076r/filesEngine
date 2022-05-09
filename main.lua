@@ -1,14 +1,18 @@
+function listKeys(table,tpath)
+	tpath = tpath or 'ROOT'
+	for i,v in pairs(table) do
+		if type(v) == 'table' then
+			print(tpath..'.'..i..':')
+			listKeys(v,'\t'..tpath..'.'..i)
+		else
+			print(tpath..'.'..i)
+		end
+	end
+end
+
 function love.load()
 	require("/Engine/filesConfig")
-	print("loaded engine")
-	files.assets.Audio.new("no","/Engine/wildwest.mp3")
-	nomp4 = files.assets.Audio.getSound("no")
-	files.assets.Audio.loadSound("no",1)
-	print("loaded intro song")
-	files.assets.Video.new("no","/Engine/no.ogv")
-	no2mp4 = files.assets.Video.getVideo("no")
-	files.assets.Video.loadVideo("no",0)
-	print("ready to draw")
+	listKeys(files)
 end
 function love.update(dt)
 	files.update(dt)
