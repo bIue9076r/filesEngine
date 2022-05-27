@@ -34,6 +34,18 @@ files.display.type = 'table'
 files.game.name = 'game'
 files.game.type = 'table'
 
+function files.listKeys(table,tpath)
+	tpath = tpath or 'ROOT'
+	for i,v in pairs(table) do
+		if type(v) == 'table' then
+			print(tpath..'.'..i..':')
+			files.listKeys(v,'\t'..tpath..'.'..i)
+		else
+			print(tpath..'.'..i)
+		end
+	end
+end
+
 files.update = function(dt)
 	sound.update(dt)
 	video.update(dt)
