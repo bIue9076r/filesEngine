@@ -1,6 +1,6 @@
 function love.load()
 	require("/Engine/filesConfig")
-	listKeys(files)
+	files.listKeys(files)
 end
 function love.update(dt)
 	files.update(dt)
