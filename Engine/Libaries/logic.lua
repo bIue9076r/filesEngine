@@ -477,7 +477,7 @@ Logic = {
 		local tftable,_,o5 = pcall(Logic.ToTFTable,{1,1,1,1}) and pcall(Logic.ToBINTable,{"true","true","true","true"}),pcall(Logic.ToBINTable,{"true","true","true","true"})
 		Logic.ToTFTable({1,1,1,1})
 		Logic.ToBINTable({"true","true","true","true"})
-		if gates == true and halfop == true and fullop == true and check == true and tfstring == true and o1 ~= nil and o2 ~= nil and o3 ~= nil and o4 ~= nil and o5 ~= nil then
+		if gates == true and halfop == true and fullop == true and check == true and tftable == true and o1 ~= nil and o2 ~= nil and o3 ~= nil and o4 ~= nil and o5 ~= nil then
 			print("No errors with this version")
 		end
 		print("Error Status Check: ")
