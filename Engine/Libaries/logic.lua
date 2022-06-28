@@ -2,7 +2,7 @@ Logic = {
 	
 	System = require(LIBPATH.."logicSystem");
 
-	TOBOOL = {["true"]=true,["false"]=false,["1"]=true,["0"]=false,};
+	TOBOOL = {["true"]=true,["false"]=false,["1"]=true,["0"]=false,[1]=true,[0]=false};
 
 	NOT = function(a) -- Not Gate
 		return not a

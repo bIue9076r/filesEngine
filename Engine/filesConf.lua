@@ -4,12 +4,14 @@ files.enums = {}
 files.timer = {}
 files.temp = {}
 files.math = {}
+files.mouse = {}
 files.assets = {}
 files.display = {}
 files.game = {}
 
 require(LIBPATH.."enums")
 require(LIBPATH.."math")
+require(LIBPATH.."mouse")
 require(LIBPATH.."timer")
 require(LIBPATH.."temp")
 require(LIBPATH.."display")
@@ -27,6 +29,8 @@ files.temp.name = 'temp'
 files.temp.type = 'table'
 files.math.name = 'math'
 files.math.type = 'table'
+files.mouse.name = 'math'
+files.mouse.type = 'table'
 files.assets.name = 'assets'
 files.assets.type = 'table'
 files.display.name = 'display'
@@ -50,9 +54,11 @@ files.update = function(dt)
 	sound.update(dt)
 	video.update(dt)
 	timer.update(dt)
+	mouse.update()
 end
 
 files.draw = function()
 	video.draw()
 	timer.draw()
+	mouse.draw()
 end
