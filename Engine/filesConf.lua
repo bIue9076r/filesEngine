@@ -7,6 +7,7 @@ files.math = {}
 files.mouse = {}
 files.assets = {}
 files.display = {}
+files.range = {}
 files.game = {}
 
 require(LIBPATH.."enums")
@@ -15,6 +16,7 @@ require(LIBPATH.."mouse")
 require(LIBPATH.."timer")
 require(LIBPATH.."temp")
 require(LIBPATH.."display")
+require(LIBPATH.."range")
 require(ASSETMANAGERPATH.."assets")
 require(WORLDPATH.."camera")
 require(WORLDPATH.."Exp")
@@ -35,6 +37,8 @@ files.assets.name = 'assets'
 files.assets.type = 'table'
 files.display.name = 'display'
 files.display.type = 'table'
+files.range.name = 'range'
+files.range.type = 'table'
 files.game.name = 'game'
 files.game.type = 'table'
 
