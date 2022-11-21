@@ -11,12 +11,16 @@ function sound.new(n,p,at)
 end
 
 function sound.getSound(n)
+	n = n or ''
+	if sound[n] == nil then
+		return sound[1] -- replace with blank sound
+	end
 	return sound[n]
 end
 
 function sound.loadSound(n,del)
 	if type(n) == 'string' then
-		table.insert(sound.LoadedSounds,{sound = sound[n], delay = del, played = false})
+		table.insert(sound.LoadedSounds,{sound = sound.getSound(n), delay = del, played = false})
 	else
 		table.insert(sound.LoadedSounds,{sound = n, delay = del, played = false})
 	end

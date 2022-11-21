@@ -136,7 +136,7 @@ Logic = {
 		return values -- its 1
 	end;
 
-	ToTFTable = function(tbl) -- Changes a binary string to a True False table
+	ToTFTable = function(tbl) -- Changes a binary table to a True False table
 		local ot
 		local out = {}
 		local rstr = Logic.ReverseTable(tbl)
@@ -147,7 +147,7 @@ Logic = {
 		return Logic.ReverseTable(out)
 	end;
 
-	ToBINTable = function(tbl) -- changes a True false string to binary table
+	ToBINTable = function(tbl) -- changes a True false table to binary table
 		local out = {}
 		for i =1,#tbl do
 			if tbl[i] == "false" then

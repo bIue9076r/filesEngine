@@ -8,6 +8,10 @@ function video.new(n,p)
 end
 
 function video.getVideo(n)
+	n = n or ''
+	if video[n] == nil then
+		return video[1] -- replace with blank video
+	end
 	return video[n]
 end
 
@@ -16,7 +20,7 @@ function video.loadVideo(n,del,vx,vy)
 	vy = vy or 0
 	start = love.timer.getTime()
 	if type(n) == 'string' then
-		table.insert(video.LoadedVideos,{video = video[n], delay = del, played = false})
+		table.insert(video.LoadedVideos,{video = video.getVideo(n), delay = del, played = false})
 	else
 		table.insert(video.LoadedVideos,{video = n, delay = del, played = false})
 	end
