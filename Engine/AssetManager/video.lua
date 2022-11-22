@@ -15,12 +15,11 @@ function video.getVideo(n)
 	return video[n]
 end
 
-function video.loadVideo(n,del,vx,vy)
-	vx = vx or 0
-	vy = vy or 0
-	start = love.timer.getTime()
+function video.loadVideo(n,del,vix,viy)
+	vix = vix or 0
+	viy = viy or 0
 	if type(n) == 'string' then
-		table.insert(video.LoadedVideos,{video = video.getVideo(n), delay = del, played = false})
+		table.insert(video.LoadedVideos,{video = video.getVideo(n), delay = del, played = false, vx = vix, vy = viy})
 	else
 		table.insert(video.LoadedVideos,{video = n, delay = del, played = false})
 	end
@@ -36,7 +35,6 @@ function video.update(dt)
 			v.played = true
 		end
 		if v.delay < -(v.video:getSource():getDuration("seconds")) then -- trash collection
-			print(love.timer.getTime() - start)
 			video.LoadedVideos[i] = nil
 			video.LoadedVideosToDraw[tostring(v)] = nil
 		end
