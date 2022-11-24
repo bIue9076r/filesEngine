@@ -30,7 +30,7 @@ function timer.update(dt)
 		v.delay = v.delay - dt
 		if v.delay < 0 and v.activated == false then
 			v.event(table.unpack(v.eventargs))
-			v.played = true
+			v.activated = true
 		end
 		if v.delay < -3 then -- trash collection
 			timer.LoadedEventsUpdate[i] = nil
@@ -44,7 +44,7 @@ function timer.draw()
 		v.delay = v.delay - dt
 		if v.delay < 0 and v.activated == false then
 			v.event(table.unpack(v.eventargs))
-			v.played = true
+			v.activated = true
 		end
 		if v.delay < -30 then -- trash collection
 			timer.LoadedEventsDraw[i] = nil
