@@ -27,6 +27,7 @@ end
 
 function video.clearall()
 	for i,v in pairs(video.LoadedVideos) do
+		v.video = nil
 		video.LoadedVideos[i] = nil
 		video.LoadedVideosToDraw[tostring(v)] = nil
 	end
@@ -42,6 +43,7 @@ function video.update(dt)
 			v.played = true
 		end
 		if v.delay < -(v.video:getSource():getDuration("seconds")) then -- trash collection
+			v.video = nil
 			video.LoadedVideos[i] = nil
 			video.LoadedVideosToDraw[tostring(v)] = nil
 		end
