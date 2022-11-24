@@ -26,6 +26,7 @@ mtype = math.type
 sub = string.sub
 tmove = table.move
 tpack = table.pack
+table.unpack = table.unpack or unpack
 tunpack = table.unpack
 tcat = table.concat
 tinsert = table.insert

@@ -26,6 +26,12 @@ function sound.loadSound(n,del)
 	end
 end
 
+function sound.clearall()
+	for i,v in pairs(sound.LoadedSounds) do
+		sound.LoadedSounds[i] = nil
+	end
+end
+
 function sound.update(dt)
 	for i,v in pairs(sound.LoadedSounds) do
 		v.delay = v.delay - dt

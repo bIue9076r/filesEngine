@@ -25,6 +25,13 @@ function video.loadVideo(n,del,vix,viy)
 	end
 end
 
+function video.clearall()
+	for i,v in pairs(video.LoadedVideos) do
+		video.LoadedVideos[i] = nil
+		video.LoadedVideosToDraw[tostring(v)] = nil
+	end
+end
+
 function video.update(dt)
 	for i,v in pairs(video.LoadedVideos) do
 		v.delay = v.delay - dt

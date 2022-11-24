@@ -16,6 +16,15 @@ function timer.loadEvent(n,del,args,drw)
 	end
 end
 
+function timer.clearall()
+	for i,v in pairs(timer.LoadedEventsUpdate) do
+		timer.LoadedEventsUpdate[i] = nil
+	end
+	for i,v in pairs(timer.LoadedEventsDraw) do
+		timer.LoadedEventsDraw[i] = nil
+	end
+end
+
 function timer.update(dt)
 	for i,v in pairs(timer.LoadedEventsUpdate) do
 		v.delay = v.delay - dt
