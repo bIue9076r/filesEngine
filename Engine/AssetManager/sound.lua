@@ -28,7 +28,7 @@ end
 
 function sound.clearall()
 	for i,v in pairs(sound.LoadedSounds) do
-		v.sound = nil
+		v.sound:release()
 		sound.LoadedSounds[i] = nil
 	end
 end
@@ -42,7 +42,7 @@ function sound.update(dt)
 			v.played = true
 		end
 		if v.delay < -(v.sound:getDuration("seconds")) then -- trash collection
-			v.sound = nil
+			v.sound:release()
 			sound.LoadedSounds[i] = nil
 		end
 	end
