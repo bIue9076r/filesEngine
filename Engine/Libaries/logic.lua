@@ -209,12 +209,12 @@ Logic = {
 			if #a > #b then
 				n = #a
 				while #b < #a do
-					b = b..0
+					table.insert(b,0)
 				end
 			else
 				n = #b
 				while #b > #a do
-					a = a..0
+					table.insert(a,0)
 				end
 			end
 		end
