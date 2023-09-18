@@ -26,4 +26,3 @@ files.math.maxinteger = math.maxinteger
 files.math.mininteger = math.mininteger
 files.math.toint = math.tointeger
 files.math.mtype = math.type
-files.math.logic = require(LIBPATH.."logic")
