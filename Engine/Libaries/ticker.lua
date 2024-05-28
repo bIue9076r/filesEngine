@@ -54,7 +54,7 @@ sticker.tr = 1
 function sticker.new(s,tr)
 	tbl = {
 		t = ticker.new(),
-		s = s, tr = tr
+		s = s or "", tr = tr or 1
 	}
 
 	mt = {
