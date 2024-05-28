@@ -73,7 +73,7 @@ function sticker:print()
 	n = floor((t * (l/lt)) + 1)
 	ub = min(l,n)
 	r = sub(s,1,ub)
-	if (n > l) then
+	if (n < l) then
 		self.t:inc()
 	end
 	return r
