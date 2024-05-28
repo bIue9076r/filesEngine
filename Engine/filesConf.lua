@@ -8,6 +8,8 @@ files.mouse = {}
 files.assets = {}
 files.display = {}
 files.range = {}
+files.ticker = {}
+files.sticker = {}
 files.game = {}
 
 require(LIBPATH.."enums")
@@ -17,6 +19,8 @@ require(LIBPATH.."timer")
 require(LIBPATH.."temp")
 require(LIBPATH.."display")
 require(LIBPATH.."range")
+require(LIBPATH.."ticker")
+require(LIBPATH.."sticker")
 require(ASSETMANAGERPATH.."assets")
 require(WORLDPATH.."camera")
 require(WORLDPATH.."Exp")
@@ -39,6 +43,10 @@ files.display.name = 'display'
 files.display.type = 'table'
 files.range.name = 'range'
 files.range.type = 'table'
+files.ticker.name = 'ticker'
+files.ticker.type = 'table'
+files.sticker.name = 'sticker'
+files.sticker.type = 'table'
 files.game.name = 'game'
 files.game.type = 'table'
 files.assets.Textures.name = 'Textures'
