@@ -10,6 +10,8 @@ files.display = {}
 files.range = {}
 files.ticker = {}
 files.sticker = {}
+files.window = {}
+files.file = {}
 files.game = {}
 
 require(LIBPATH.."enums")
@@ -20,9 +22,12 @@ require(LIBPATH.."temp")
 require(LIBPATH.."display")
 require(LIBPATH.."range")
 require(LIBPATH.."ticker")
+require(LIBPATH.."window")
+require(LIBPATH.."file")
 require(ASSETMANAGERPATH.."assets")
 require(WORLDPATH.."camera")
 require(WORLDPATH.."Exp")
+require(WORLDPATH.."state")
 
 files.name = 'files'
 files.type = 'table'
@@ -46,8 +51,10 @@ files.ticker.name = 'ticker'
 files.ticker.type = 'table'
 files.sticker.name = 'sticker'
 files.sticker.type = 'table'
-files.game.name = 'game'
-files.game.type = 'table'
+files.window.name = 'window'
+files.window.type = 'table'
+files.file.name = 'file'
+files.file.type = 'table'
 files.assets.Textures.name = 'Textures'
 files.assets.Audio.name = 'Audio'
 files.assets.Video.name = 'Video'
@@ -56,10 +63,14 @@ files.assets.Textures.type = 'class'
 files.assets.Audio.type = 'class'
 files.assets.Video.type = 'class'
 files.assets.Fonts.type = 'class'
+files.game.name = 'game'
+files.game.type = 'table'
 files.game.camera.name = 'camera'
 files.game.camera.type = 'class'
 files.game.Exp.name = 'Exp'
 files.game.Exp.type = 'class'
+files.game.state.name = 'state'
+files.game.state.type = 'class'
 
 function files.listKeys(table,tpath)
 	tpath = tpath or 'ROOT'
