@@ -5,7 +5,7 @@
 # What is this
 A general game engine in Love2d in one place.
 
-# Version: x.x.x
+# Version: 0.1.x
 
 # Update:
 + Game State Module
