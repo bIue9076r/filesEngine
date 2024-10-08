@@ -14,3 +14,5 @@ A general game engine in Love2d in one place.
 ---
 
 # Documentation:
+
+files - table with all the functions
