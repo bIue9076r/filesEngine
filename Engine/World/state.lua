@@ -30,7 +30,7 @@ function State.new(id,l)
 	}
 	
 	local mt = {
-		__call = GetId,
+		__call = State.GetId,
 		__index = State,
 	}
 	
